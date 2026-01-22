@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> <!-- nécessaire?? je ne l'ai pas vu partout -->
 <odoo>
     <record id="view_clinique_animal_tree" model="ir.ui.view">
-        <field name="name">clinique.animal.tree</field>
+        <field name="name">clinique.animal.list</field>
         <field name="model">clinique_animal</field>
         <field name="arch" type="xml">
             <list>
@@ -12,17 +12,22 @@
         </field>
     </record>
 
-    <record id="action_clinique_animal" model="ir.actions.act_window">
-        <field name="name">Animal Clinique</field>
+    <!-- Ce qui se passe quand on clique sur le menu "Animaux"-->
+    <record id="action_clinique_animaux" model="ir.actions.act_window">
+        <field name="name">Clinique Animale</field>
         <field name="res_model">clinique_animal</field>
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_clinique_root" name="Clinique"/>
+    <!-- Tout ce qu'on voit sur la topBar (les menus)-->
     <menuitem
-        id="menu_clinique_animal"
+        id="menu_clinique_root"
+        name="Clinique Veterinaire"
+    />
+    <menuitem
+        id="menu_clinique_animaux"
         name="Animaux"
         parent="menu_clinique_root"
-        action="action_clinique_animal"
+        action="action_clinique_animaux"
     />
 </odoo>
