@@ -11,5 +11,5 @@ class CliniqueProprietaire(models.Model):
     animal_ids = fields.One2many("clinique.animal", "proprietaire_id", string="Animaux" )
 
 #Represente une liste d'animaux (que possede le proprietaire), comme :
-#SELECT * FROM clinique_animal
+#SELECT * FROM clinique.animal
 #WHERE proprietaire_id = ce_proprietaire.id;
