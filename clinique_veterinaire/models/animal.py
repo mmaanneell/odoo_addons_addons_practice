@@ -3,7 +3,7 @@ from odoo import fields, models
 #classe qui represente table dans la BDD
 class CliniqueAnimal(models.Model):
 
-    _name = 'clinique_animal'
+    _name = 'clinique.animal'
     _description = 'Animal pour la clinique'
 
     #comme les "attributs" de ma classe

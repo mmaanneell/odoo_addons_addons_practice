@@ -2,7 +2,7 @@
 <odoo>
     <record id="view_clinique_animal_tree" model="ir.ui.view">
         <field name="name">clinique.animal.list</field>
-        <field name="model">clinique_animal</field>
+        <field name="model">clinique.animal</field>
         <field name="arch" type="xml">
             <list>
                 <field name="name"/>

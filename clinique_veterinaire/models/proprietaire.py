@@ -8,7 +8,7 @@ class CliniqueProprietaire(models.Model):
     phone_number = fields.Char(string="Numero de telephone")
     email = fields.Char(string="Courriel")
 
-    animal_ids = fields.One2many("clinique_animal", "proprietaire_id", string="Animaux" )
+    animal_ids = fields.One2many("clinique.animal", "proprietaire_id", string="Animaux" )
 
 #Represente une liste d'animaux (que possede le proprietaire), comme :
 #SELECT * FROM clinique_animal
