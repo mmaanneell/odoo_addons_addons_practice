@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?> <!-- nécessaire?? je ne l'ai pas vu partout -->
 <odoo>
+    <!-- Les différentes vues (animaux/proprietaires)-->
     <record id="view_clinique_animal_tree" model="ir.ui.view">
         <field name="name">clinique.animal.list</field>
         <field name="model">clinique.animal</field>
@@ -24,14 +25,15 @@
         </field>
     </record>
 
-    <!-- Ce qui se passe quand on clique sur le menu "Animaux"-->
+    <!-- Actions (Ce qui se passe quand on clique sur le menu...)-->
+    <!--"Animaux"-->
     <record id="action_clinique_animaux" model="ir.actions.act_window">
         <field name="name">Clinique Animale</field>
         <field name="res_model">clinique.animal</field>
         <field name="view_mode">list,form</field>
     </record>
 
-    <!-- Action du menu "Proprietaires"-->
+    <!--"Proprietaires"-->
     <record id="action_clinique_proprietaires" model="ir.actions.act_window">
         <field name="name">Clinique Animale</field>
         <field name="res_model">clinique.proprietaire</field>
@@ -49,7 +51,7 @@
         parent="menu_clinique_root"
         action="action_clinique_animaux"
     />
-        <menuitem
+    <menuitem
         id="menu_clinique_proprietaires"
         name="Proprietaires"
         parent="menu_clinique_root"

@@ -11,5 +11,15 @@ class CliniqueAnimal(models.Model):
     name = fields.Char(string="Nom")
     species = fields.Char(string="Espece")
     birth_date = fields.Date(string="Date de naissance")
+    sterilized = fields.Selection(
+        string="Sterilise",
+        selection=[
+            ("yes", "Oui"),
+            ("no", "Non"),
+            ("unknown", "inconnu"),
+        ],
+        default="unknown",
+        required=True,
+    )
 
     proprietaire_id = fields.Many2one("clinique.proprietaire", string="Proprietaire")
