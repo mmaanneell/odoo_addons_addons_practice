@@ -12,3 +12,4 @@ class CliniqueAnimal(models.Model):
     species = fields.Char(string="Espece")
     birth_date = fields.Date(string="Date de naissance")
 
+    proprietaire_id = fields.Many2one("clinique.proprietaire", string="Proprietaire")
