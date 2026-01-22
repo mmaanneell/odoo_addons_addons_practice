@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clinique_test,access_clinique_test,model_clinique_test,,1,1,1,1
+access_clinique_animal,access_clinique_animal,model_clinique_animal,,1,1,1,1
