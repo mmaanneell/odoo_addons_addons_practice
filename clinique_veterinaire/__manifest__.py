@@ -5,10 +5,14 @@
     'category': 'Services',
     'author': 'Manel Guechetouli',
     'license': 'LGPL-3',
-    'depends': ['base'],
+    'depends': [
+        'base',
+        'website',
+    ],
     'data': [
         "security/ir.model.access.csv",
         "views/animal_view.xml",
+        'views/website_animaux.xml',
     ],
     'installable': True,
     'application': True,
