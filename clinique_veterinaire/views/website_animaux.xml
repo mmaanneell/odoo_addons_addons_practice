@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Template du site web -->
+    <template id="website_animaux" name="Animaux de la clinique">
+
+        <!-- Layout de base du site Odoo (header, footer, etc.) -->
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <!-- Titre -->
+                <h1 class="mb-4 text-center">
+                    Animaux de la clinique vétérinaire!!
+                </h1>
+
+                <!-- Si y'a aucun animal -->
+                <t t-if="not animals">
+                    <div class="alert alert-warning text-center">
+                        Aucun animal enregistré pour le moment.
+                    </div>
+                </t>
+
+                <!-- Liste des animaux -->
+                <t t-foreach="animals" t-as="animal">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <t t-esc="animal.name"/>
+                            </h5>
+                            <p class="card-text mb-1">
+                                <strong>Espèce :</strong>
+                                <t t-esc="animal.espece"/>
+                            </p>
+                            <p class="card-text mb-1">
+                                <strong>Date de naissance :</strong>
+                                <t t-esc="animal.date_naissance"/>
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+
+    </template>
+</odoo>
