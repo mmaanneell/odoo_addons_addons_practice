@@ -13,6 +13,7 @@
         "security/ir.model.access.csv",
         "views/animal_view.xml",
         'views/website_animaux.xml',
+        'views/snippets.xml',
     ],
     'installable': True,
     'application': True,
