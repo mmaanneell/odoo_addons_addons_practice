@@ -3,6 +3,7 @@
 
     <!-- CONTENU DU SNIPPET -->
     <template id="snippet_animaux" name="Animaux de la clinique">
+        <!-- le template => bout de page web, reutilisable -->
         <section class="container my-5">
             <h2 class="text-center mb-4">
                 Nos animaux !!!
@@ -10,15 +11,20 @@
 
             <div class="row">
                 <t t-foreach="request.env['clinique.animal'].sudo().search([])" t-as="animal">
+                    <!-- meme requete que dans le website_animaux ^^ -->
+                    <!-- pour chaque animal, dans le modele 'clinique.animal'...-->
+                    <!-- t-as="animal" = variable locale-->
                     <div class="col-md-4 mb-3">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <t t-esc="animal.name"/>
+                                    <!-- t-esc = sécurité contre le HTML injecté-->
                                 </h5>
                                 <p class="card-text">
                                     <strong>Espèce :</strong>
                                     <t t-esc="animal.species"/>
+                                    <!-- t-esc = sécurité contre le HTML injecté-->
                                 </p>
                             </div>
                         </div>
@@ -28,12 +34,20 @@
         </section>
     </template>
 
-    <!-- DÉCLARATION DANS LE WEBSITE BUILDER -->
+    <!-- AJOUT DU SNIPPET AU WEBSITE BUILDER -->
     <template id="snippet_animaux_snippet" inherit_id="website.snippets">
-        <xpath expr="//section[contains(@class, 'o_snippet_structure')]" position="inside">
+        <!-- ^^ modifie la vue website.snippets ^^ -->
+        <xpath expr="//t[@t-snippet]" position="after">
+            <!-- ^^ ouvre le template 'website.snippets'
+            puis cherche les balises <t> qui ont 't-snippet="..." ' -->
+            <!-- ^^ after => tout ce qui suit (ma balise t en dessous), doit etre
+            inséré apres les elements trouvés en haut -->
             <t t-snippet="clinique_veterinaire.snippet_animaux"
-               t-thumbnail="/website/static/src/img/snippets/s_features.svg"/>
+               t-thumbnail="/website/static/src/img/snippets/s_features.svg"
+            />
+            <!-- ^^ c'est ca qui permet le drag and drop ^^
+            le snippet = un template QWeb (dans le module clinique_veterinaire)
+            et son id = snippet_animaux -->
         </xpath>
     </template>
-
 </odoo>
