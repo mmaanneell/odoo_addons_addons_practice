@@ -15,6 +15,14 @@
         'views/website_animaux.xml',
         'views/snippets.xml',
     ],
+    'assets': {
+        "web.assets_frontend": [
+            "/clinique_veterinaire/static/src/scss/clinique_snippet.scss",
+        ],
+        "website.assets_wysiwyg": [
+            "/clinique_veterinaire/static/src/js/clinique_snippet_options.esm.js",
+        ],
+    },
     'installable': True,
     'application': True,
 }
