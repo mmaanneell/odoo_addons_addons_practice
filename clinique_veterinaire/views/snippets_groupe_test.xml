@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="snippets_groupe_test" inherit_id="website.snippets" name="Clinique essai snippet groupe">
+
+        <!-- Case du panneau de droite (website builder) -->
+        <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+            <!-- ^^ prends tous les elements avec balise 'snippets'
+             dans website.snippets ^^, puis prend le premier
+             element de 'snippet_groups' et place MON groupe
+             avant ce premier -->
+            <t snippet-group="clinique_groupe_snippets"
+               t-snippet="website.s_snippet_group"
+               string="Clinique vétérinaire"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo_animaux.png"/>
+        </xpath>
+
+        <!-- Ajouter snippets au groupe-->
+        <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+            <!-- ^^ pareil qu'en haut, mais la on ajoute
+            nos snippets (pas un groupe) et on ajoute ça
+            dans 'snippets_structure' (pas snippet_groups) -->
+            <t t-snippet="clinique_veterinaire.snippet_animaux"
+               string="Animaux"
+               group="clinique_groupe_snippets"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo_perroquet.png"/>
+
+            <t t-snippet="clinique_veterinaire.snippet_proprietaires"
+               string="Propriétaires"
+               group="clinique_groupe_snippets"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo_cheval.png"/>
+        </xpath>
+
+    </template>
+</odoo>

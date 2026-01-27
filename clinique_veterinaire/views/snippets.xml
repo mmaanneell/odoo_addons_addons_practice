@@ -75,13 +75,13 @@
             <!-- ^^ after => tout ce qui suit (ma balise t en dessous), doit etre
             inséré apres les elements trouvés en haut -->
             <t t-snippet="clinique_veterinaire.snippet_animaux"
-               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo.png"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo_perroquet.png"
             />
             <!-- ^^ c'est ca qui permet le drag and drop ^^
             le snippet = un template QWeb (dans le module clinique_veterinaire)
             et son id = snippet_animaux -->
             <t t-snippet="clinique_veterinaire.snippet_proprietaires"
-               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo.png"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo_cheval.png"
             />
         </xpath>
     </template>

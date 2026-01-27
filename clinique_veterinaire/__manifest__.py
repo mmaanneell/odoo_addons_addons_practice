@@ -14,6 +14,7 @@
         "views/animal_view.xml",
         'views/website_animaux.xml',
         'views/snippets.xml',
+        'views/snippets_groupe_test.xml',
     ],
     'assets': {
         "web.assets_frontend": [
