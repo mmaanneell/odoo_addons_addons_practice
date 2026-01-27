@@ -6,7 +6,6 @@
         <!-- Layout de base du site Odoo (header, footer, etc.) -->
         <t t-call="website.layout">
             <div class="container mt-5">
-                <!-- Titre -->
                 <h1 class="mb-4 text-center">
                     Animaux de la clinique vétérinaire!!
                 </h1>

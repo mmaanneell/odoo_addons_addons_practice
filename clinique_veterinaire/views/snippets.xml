@@ -43,7 +43,7 @@
             <!-- ^^ after => tout ce qui suit (ma balise t en dessous), doit etre
             inséré apres les elements trouvés en haut -->
             <t t-snippet="clinique_veterinaire.snippet_animaux"
-               t-thumbnail="/website/static/src/img/snippets/s_features.svg"
+               t-thumbnail="/clinique_veterinaire/static/description/clinique_logo.png"
             />
             <!-- ^^ c'est ca qui permet le drag and drop ^^
             le snippet = un template QWeb (dans le module clinique_veterinaire)
