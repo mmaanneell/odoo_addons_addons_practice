@@ -4,7 +4,7 @@
     <!-- CONTENU DU SNIPPET -->
     <template id="snippet_animaux" name="Animaux de la clinique">
         <!-- le template => bout de page web, reutilisable -->
-        <section class="container my-5">
+        <section class="container my-5 js_clinique_animaux">
             <h2 class="text-center mb-4">
                 Nos animaux !!!
             </h2>
