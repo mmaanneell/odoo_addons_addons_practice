@@ -23,3 +23,10 @@ class CliniqueAnimal(models.Model):
     )
 
     proprietaire_id = fields.Many2one("clinique.proprietaire", string="Proprietaire")
+    cage_ids = fields.Many2many(
+        comodel_name="clinique.cage",
+        relation="clinique_animal_cage_relation",
+        column1="animal_id",
+        column2="cage_id",
+        string="Cages"
+    )

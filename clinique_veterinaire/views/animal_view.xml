@@ -25,6 +25,19 @@
         </field>
     </record>
 
+    <record id="view_clinique_cage_tree" model="ir.ui.view">
+        <field name="name">clinique.cage.list</field>
+        <field name="model">clinique.cage</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="color"/>
+                <field name="animal_count" />
+                <field name="size"/>
+            </list>
+        </field>
+    </record>
+
     <!-- Actions (Ce qui se passe quand on clique sur le menu...)-->
     <!--"Animaux"-->
     <record id="action_clinique_animaux" model="ir.actions.act_window">
@@ -37,6 +50,13 @@
     <record id="action_clinique_proprietaires" model="ir.actions.act_window">
         <field name="name">Clinique Animale</field>
         <field name="res_model">clinique.proprietaire</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!--"Cages"-->
+    <record id="action_clinique_cages" model="ir.actions.act_window">
+        <field name="name">Clinique Animale</field>
+        <field name="res_model">clinique.cage</field>
         <field name="view_mode">list,form</field>
     </record>
 
@@ -56,5 +76,11 @@
         name="Proprietaires"
         parent="menu_clinique_root"
         action="action_clinique_proprietaires"
+    />
+    <menuitem
+        id="menu_clinique_cages"
+        name="Cages"
+        parent="menu_clinique_root"
+        action="action_clinique_cages"
     />
 </odoo>

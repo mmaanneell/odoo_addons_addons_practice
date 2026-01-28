@@ -43,23 +43,21 @@
 
             <div class="row">
                 <t t-foreach="request.env['clinique.proprietaire'].sudo().search([])" t-as="proprietaire">
-                    <div class="col-md-4 mb-3">
-                        <div class="card h-100 shadow-sm">
+                    <div class="card h-100 shadow-sm mb-2">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <t t-esc="proprietaire.name"/>
                                 </h5>
-                                <p class="card-text">
+                                <p class="card-text mb-0">
                                     <strong>Téléphone :</strong>
                                     <t t-esc="proprietaire.phone_number"/>
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text mb-0">
                                     <strong>Courriel :</strong>
                                     <t t-esc="proprietaire.email"/>
                                 </p>
                             </div>
                         </div>
-                    </div>
                 </t>
             </div>
         </section>
