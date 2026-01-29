@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Root menu-->
+
+    <menuitem id="tomate" name="Tomate" sequence="20" web_icon="tomate,static/description/icon.png" />
+
+    <menuitem id="tomate" name="Tomate" sequence="20" web_icon="tomate,static/description/icon.png" />
+
+    <!--Sub menu-->
+
+    <menuitem id="menu" name="Menu" sequence="1" parent="tomate" />
+
+    <menuitem id="menu" name="Menu" sequence="1" parent="tomate" />
+
+    <!--Child menu-->
+
+    <menuitem id="enfant_2" name="enfant" action="enfant_enfant_2_action_window" sequence="1" parent="menu" />
+
+    <menuitem id="tomate_3" name="tomate" action="tomate_tomate_3_action_window" sequence="1" parent="menu" />
+</odoo>
