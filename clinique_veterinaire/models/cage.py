@@ -1,14 +1,15 @@
-from odoo import fields, models, api
+from odoo import api, fields, models
+
 
 class CliniqueCage(models.Model):
-    _name = 'clinique.cage'
-    _description = 'Cage de la clinique'
+    _name = "clinique.cage"
+    _description = "Cage de la clinique"
 
-    name = fields.Char(string ="Description")
+    name = fields.Char(string="Description")
     color = fields.Char(string="Couleur")
     size = fields.Selection(
-        string = "Taille",
-        selection = [
+        string="Taille",
+        selection=[
             ("small", "Petit"),
             ("medium", "Moyen"),
             ("large", "Grand"),
@@ -23,7 +24,7 @@ class CliniqueCage(models.Model):
         relation="clinique_animal_cage_relation",
         column1="cage_id",
         column2="animal_id",
-        string="Animaux"
+        string="Animaux",
     )
 
     animal_count = fields.Integer(

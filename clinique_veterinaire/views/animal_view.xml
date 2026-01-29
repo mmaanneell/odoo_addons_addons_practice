@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?> <!-- nécessaire?? je ne l'ai pas vu partout -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- nécessaire?? je ne l'ai pas vu partout -->
 <odoo>
     <!-- Les différentes vues (animaux/proprietaires)-->
     <record id="view_clinique_animal_tree" model="ir.ui.view">
@@ -6,9 +7,9 @@
         <field name="model">clinique.animal</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
-                <field name="species"/>
-                <field name="birth_date"/>
+                <field name="name" />
+                <field name="species" />
+                <field name="birth_date" />
             </list>
         </field>
     </record>
@@ -18,9 +19,9 @@
         <field name="model">clinique.proprietaire</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
-                <field name="phone_number"/>
-                <field name="email"/>
+                <field name="name" />
+                <field name="phone_number" />
+                <field name="email" />
             </list>
         </field>
     </record>
@@ -30,10 +31,10 @@
         <field name="model">clinique.cage</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
-                <field name="color"/>
+                <field name="name" />
+                <field name="color" />
                 <field name="animal_count" />
-                <field name="size"/>
+                <field name="size" />
             </list>
         </field>
     </record>
@@ -61,26 +62,13 @@
     </record>
 
     <!-- Tout ce qu'on voit sur la topBar (les menus)-->
-    <menuitem
-        id="menu_clinique_root"
-        name="Clinique Veterinaire"
-    />
-    <menuitem
-        id="menu_clinique_animaux"
-        name="Animaux"
-        parent="menu_clinique_root"
-        action="action_clinique_animaux"
-    />
+    <menuitem id="menu_clinique_root" name="Clinique Veterinaire" />
+    <menuitem id="menu_clinique_animaux" name="Animaux" parent="menu_clinique_root" action="action_clinique_animaux" />
     <menuitem
         id="menu_clinique_proprietaires"
         name="Proprietaires"
         parent="menu_clinique_root"
         action="action_clinique_proprietaires"
     />
-    <menuitem
-        id="menu_clinique_cages"
-        name="Cages"
-        parent="menu_clinique_root"
-        action="action_clinique_cages"
-    />
+    <menuitem id="menu_clinique_cages" name="Cages" parent="menu_clinique_root" action="action_clinique_cages" />
 </odoo>

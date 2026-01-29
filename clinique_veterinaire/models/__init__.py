@@ -1,4 +1,1 @@
-from . import test
-from . import animal
-from . import proprietaire
-from . import cage
+from . import animal, cage, proprietaire, test

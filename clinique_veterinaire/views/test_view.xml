@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?> <!-- nécessaire?? je ne l'ai pas vu partout -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- nécessaire?? je ne l'ai pas vu partout -->
 <odoo>
-
     <record id="view_clinique_test_tree" model="ir.ui.view">
         <field name="name">clinique.test.tree</field>
         <field name="model">clinique_test</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
+                <field name="name" />
             </list>
         </field>
     </record>
@@ -17,11 +17,6 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_clinique_root" name="Clinique"/>
-    <menuitem
-        id="menu_clinique_test"
-        name="Tests"
-        parent="menu_clinique_root"
-        action="action_clinique_test"
-    />
+    <menuitem id="menu_clinique_root" name="Clinique" />
+    <menuitem id="menu_clinique_test" name="Tests" parent="menu_clinique_root" action="action_clinique_test" />
 </odoo>

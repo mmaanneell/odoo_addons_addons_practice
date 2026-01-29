@@ -1,22 +1,22 @@
 {
-    'name': 'Clinique veterinaire',
-    'version': '1.0',
-    'summary': 'Gestion d\'une file d\'animaux',
-    'category': 'Services',
-    'author': 'Manel Guechetouli',
-    'license': 'LGPL-3',
-    'depends': [
-        'base',
-        'website',
+    "name": "Clinique veterinaire",
+    "version": "1.0",
+    "summary": "Gestion d'une file d'animaux",
+    "category": "Services",
+    "author": "Manel Guechetouli",
+    "license": "LGPL-3",
+    "depends": [
+        "base",
+        "website",
     ],
-    'data': [
+    "data": [
         "security/ir.model.access.csv",
         "views/animal_view.xml",
-        'views/website_animaux.xml',
-        'views/snippets.xml',
-        'views/snippets_groupe_test.xml',
+        "views/website_animaux.xml",
+        "views/snippets.xml",
+        "views/snippets_groupe_test.xml",
     ],
-    'assets': {
+    "assets": {
         "web.assets_frontend": [
             "/clinique_veterinaire/static/src/scss/clinique_snippet.scss",
         ],
@@ -24,6 +24,6 @@
             "/clinique_veterinaire/static/src/js/clinique_snippet_options.esm.js",
         ],
     },
-    'installable': True,
-    'application': True,
+    "installable": True,
+    "application": True,
 }
