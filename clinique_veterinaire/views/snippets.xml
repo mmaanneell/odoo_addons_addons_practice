@@ -3,18 +3,18 @@
 
     <!-- CONTENU DU SNIPPET -->
     <template id="snippet_animaux" name="Animaux de la clinique">
-        <!-- le template => bout de page web, reutilisable -->
-        <section class="container my-5 js_clinique_animaux">
+        <!-- ^^ le template => bout de page web, reutilisable -->
+        <section class="container my-5 js_clinique_animaux cols-3">
             <h2 class="text-center mb-4">
                 Nos animaux !!!
             </h2>
 
-            <div class="row">
+            <div class="animal-liste">
                 <t t-foreach="request.env['clinique.animal'].sudo().search([])" t-as="animal">
                     <!-- meme requete que dans le website_animaux ^^ -->
                     <!-- pour chaque animal, dans le modele 'clinique.animal'...-->
                     <!-- t-as="animal" = variable locale-->
-                    <div class="col-md-4 mb-3">
+                    <div class="animal-colonne mb-3">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">
